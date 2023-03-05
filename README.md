@@ -24,7 +24,7 @@ Finally, our model was deployed in the cloud with Flask (web application) and it
 One of the main challenges of this project was the time to complete all the steps of data analysis before building the machine learning model, testing it and deploying it in a short time. In addition to that, as we are still making some changes in the application as this is an iterative process, another challenges faced were: 
 - How to choose which features can offer better preformance to our model;
 - How to balance a dataset biased toward some variables to make ethical and more trustworthy decisions;
-- How to make flask work with both 'get' and 'post' methods;
+- How to make flask work with an API;
 - How to deploy the model in AWS (step still in process to be concluded).
 
 ## Future Goals
