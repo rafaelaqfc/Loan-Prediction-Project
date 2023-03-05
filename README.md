@@ -3,25 +3,29 @@
 ### [Assignment](assignment.md)
 
 ## Project/Goals
-(fill in your description and goals here)
+This project has the goal to explore and analyze a dataset about loan in order to understand which group of applicants and co-applicants are more likely to be approved when requesting a loan to a financial institution. After interpreting de dataset, making EDA, cleaning and preprocessing the data, we aimed to create a machine learning model to make loan predictions based on the dataset available and, finally, deploy it to the cloud.
 
 ## Hypothesis
-(fill in your hypothesis about which subset of applicants will be most likely to have their loan approved, and why. Give some examples of how you will test this hypothesis)
+Before having any contact with the dataset, we generated some hypothesis from our problem statement and research-question (*Which group of applicants are more likely to be approved to get a loan?*) in order to analyze some of them while we were doing EDA. ven thought we created beforehand 9 hypothesis to be tested, only 3 were analyzed at this moment, such as: if applicants or co-applicants were moslty male, married, with a high-level of education and living in property areas with growth perspectives. As part of our results, we noticed that, altghout the dataset is significate biased in some of the variables that it contains, the group most likely to get a loan is composed of males, who are married, living in semiurban areas and not necessarily graduated. More research is needed in the area though as this dataset is not balanced and, therefore, the results are not accurate.
 
-## EDA 
-(fill in what you discovered in your exploration of the dataset)
+## EDA Process (Data Exploration, Cleaning and Processing)
+During the EDA, we explored the distribution of some variables, such as the applicant and co-applicant income and we noticed that they didn't follow a normal distribution. Processing steps wuch as the log was applied to both variables which were feature enginneered in a new one called 'Total_Income'. 
+Besides this, most of this dataset is composed of categorical variables. Therefore, each one of them was explored with the use of visualizations and pivot tables, and, after that, converted to numerical types with different techniques. 
+From these results, we could extract the basic demographics from our customers of this dataset. Also, we could see that the dataset is biased towards genre (male), civil status (married) and education (graduate) as there is a larger count of these values in comparison with the others. 
+After the EDA, we moved forward to clean the data and these were the steps performed: 
+- Missing values were analyzed and filled out with different statistical metrics;
+- Extreme values were interpreted and excluded from the dataset with the log transformation applied to some variables (such as loan amount, applicant income and co-applicat income variables).
 
+## Machine Learning Model and Results
+Then, with the dataset cleaned, prepared and preprocessed, we created 2 base line models (Logistic Regressor and Random Forest) to classifify the applicants more likely to receive the loan. As Logistic Regressor gave us better evaluation metrics, we used this model to build our final pipeline. 
+Finally, our model was deployed in the cloud with Flask (web application) and it has constantly being updated to get better results. 
 
-## Process
-(fill in what you did during EDA, cleaning, feature engineering, modeling, deployment, testing)
-### (your step 1)
-### (your step 2)
-
-## Results/Demo
-(fill in your model's performance, details about the API you created, and (optional) a link to an live demo)
-
-## Challanges 
-(discuss challenges you faced in the project)
+## Challenges 
+One of the main challenges of this project was the time to complete all the steps of data analysis before building the machine learning model, testing it and deploying it in a short time. In addition to that, as we are still making some changes in the application as this is an iterative process, another challenges faced were: 
+- How to choose which features can offer better preformance to our model;
+- How to balance a dataset biased toward some variables to make ethical and more trustworthy decisions;
+- How to make flask work with both 'get' and 'post' methods;
+- How to deploy the model in AWS (step still in process to be concluded).
 
 ## Future Goals
-(what would you do if you had more time? are there any potential issues/biases with your model/use case?)
+If we had more time, more time would have been spent in the EDA and feature engineering before moving forward in building a base line model. For example, during the EDA, it was noted that the amount of loan status approval was significative bigger than the number of decline, but we didn't have the time to explore this information and its consequences to our machine learning model further. 
