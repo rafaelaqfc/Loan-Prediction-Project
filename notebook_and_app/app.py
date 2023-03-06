@@ -30,7 +30,7 @@ class RawFeats:
     
 model = pickle.load( open( "logistic_regression_model_tunned.p", "rb" ) )
 
-class Scoring(Resource):
+class Prediction(Resource):
     def post(self):
         if flask.request.method == 'GET':
             return f'Hello, I am working!'
@@ -39,15 +39,16 @@ class Scoring(Resource):
             df = pd.DataFrame(json_data.values(), index=json_data.keys()).transpose()
             # getting predictions from our model.
             res = model.predict_proba(df)
-            # # we cannot send numpy array as a result
+            # we cannot send numpy array as a result
             return res.tolist() 
     
 # Assigning an endpoint
-api.add_resource(Scoring, '/scoring')
+api.add_resource(Prediction, '/predicting')
 
 # Creating an application to be runned independently
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5002)
+    
     
 
     
