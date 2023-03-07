@@ -29,3 +29,13 @@ One of the main challenges of this project was the time to complete all the step
 
 ## Future Goals
 If we had more time, more time would have been spent in the EDA and feature engineering before moving forward in building a base line model. For example, during the EDA, it was noted that the amount of loan status approval was significative bigger than the number of decline, but we didn't have the time to explore this information and its consequences to our machine learning model further. 
+
+## What is included in this repository
+In this repository, you can find the following files:
+- The original dataset used for the analysis called 'original_customer_dataset.csv' (in 'data' folder);
+- The final dataset, cleaned and preprocessed, which was used for the training and testing set called 'df_customer_cleaned_and_processed (in 'data' folder);
+- The notebook used for the project called 'notebook_of_loan_prediction' (in 'notebook_and_app' folder);
+- The machine learning model created to predict loan applications called 'logistic_regression_model_tunned.p' (in 'notebook_and_app' folder);
+- The file created to run the web deployment of our model called 'app.py' (in 'notebook_and_app' folder);
+- The image of our pipeline in the .html format called 'main_pipeline.htmail' (in 'images' folder);
+- The presentation file in the .pptx format called 'Presentation.pptx' (in 'images' folder).
