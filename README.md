@@ -36,6 +36,8 @@ In this repository, you can find the following files:
 - The final dataset, cleaned and preprocessed, which was used for the training and testing set called 'df_customer_cleaned_and_processed (in 'data' folder);
 - The notebook used for the project called 'notebook_of_loan_prediction' (in 'notebook_and_app' folder);
 - The machine learning model created to predict loan applications called 'logistic_regression_model_tunned.p' (in 'notebook_and_app' folder);
-- The file created to run the web deployment of our model called 'app.py' (in 'notebook_and_app' folder);
+- The file created to run the app deployment locally of our model called 'app.py' (in 'notebook_and_app' folder);
+- The file created to run the model deployment in AWS called 'app_AWS.py' (in 'notebook_and_app' folder);
+- The notebook created to test the deployment of the model in the cloud called 'test_AWS_B' (in 'notebook_and_app' folder);
 - The image of our pipeline in the .html format called 'main_pipeline.htmail' (in 'images' folder);
 - The presentation file in the .pptx format called 'Presentation.pptx' (in 'images' folder).
